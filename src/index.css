@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styles for All Pages */
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0f172a #1f2937;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) - Global Scrollbar */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1f2937;
+  border-radius: 10px;
+  border: 2px solid #111827;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0f172a, #0f172a);
+  border-radius: 10px;
+  border: 2px solid #1f2937;
+  box-shadow: inset 0 0 3px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0f172a, #0f172a);
+  box-shadow: inset 0 0 5px rgba(59, 130, 246, 0.5);
+  transform: scale(1.05);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #0f172a, #0f172a);
+  transform: scale(0.95);
+}
+
+*::-webkit-scrollbar-corner {
+  background: #1f2937;
+}
+
+/* Special styling for main content areas */
+.main-scrollbar {
+  scrollbar-width: auto;
+  scrollbar-color: #0f172a #111827;
+}
+
+.main-scrollbar::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+.main-scrollbar::-webkit-scrollbar-track {
+  background: #111827;
+  border-radius: 12px;
+  border: 3px solid #0f172a;
+}
+
+.main-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0f172a, #0f172a);
+  border-radius: 12px;
+  border: 3px solid #111827;
+  box-shadow: inset 0 0 4px rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.main-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0f172a, #047857);
+  box-shadow: inset 0 0 6px rgba(16, 185, 129, 0.5);
+  transform: scale(1.1);
+}
+
+.main-scrollbar::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #047857, #065f46);
+  transform: scale(0.9);
+}
+
+/* Sidebar specific scrollbar */
+.sidebar-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #0f172a #374151;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 8px;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0f172a, #0f172a);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0f172a, #0f172a);
+  transform: scale(1.2);
+}
+
+/* Chart/Table specific scrollbars */
+.chart-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #f59e0b #1f2937;
+}
+
+.chart-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.chart-scrollbar::-webkit-scrollbar-track {
+  background: #1f2937;
+  border-radius: 8px;
+}
+
+.chart-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.chart-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #d97706, #b45309);
+}
+
+/* Modal/Popup scrollbars */
+.modal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #0f172a #0f172a;
+}
+
+.modal-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-track {
+  background: #2d1b69;
+  border-radius: 6px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0f172a, #0f172a);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0f172a, #0f172a);
+}
+
+/* Smooth scrolling for all elements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality (utility class) */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
